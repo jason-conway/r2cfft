@@ -5,16 +5,22 @@
  * @version 0.9
  * @date 2021-08-08
  *
- * @copyright Copyright (c) 2021 Jason Conway. 
+ * @copyright Copyright (c) 2021 Jason Conway. All right reserved.
+ *
  * SPDX-License-Identifier: MIT
  *
- */
+*/
 
 #pragma once
 
-#include <WProgram.h>
 #include <arm_math.h>
 #include <arm_const_structs.h>
+
+enum TransformDirection
+{
+    Forward,
+    Inverse
+};
 
 #ifdef __cplusplus
 extern "C"
