@@ -58,7 +58,7 @@ See main.cpp for example usage.
 
 * Unlike arm_cfft_f32(), the arm_rfft_fast_f32() function does not compute the RFFT / IRFFT in-place. Depending on your application, this could eliminate the need for a memcpy(), but for other applications, an additional buffer is needed- potentially requiring twice the RAM as with the in-place CFFT.
 
-For instance, initializing an FDL containing the full spectra of a high-tap-count minimum-phase FIR filter can be converted from:
+For instance, the process of initializing an FDL containing the full spectra of a high-tap-count minimum-phase FIR filter could be converted from:
 ```c
 arm_cfft_f32(&arm_cfft_sR_f32_len256, partitionBuffer, Forward, 1);
 arm_copy_f32(partitionBuffer, longFIR[i], 512);
@@ -68,7 +68,7 @@ to
 r2cfft(&rfftInstance, partitionBuffer, longFIR[i], 512, Forward);
 ```
 
-* Like with arm_rfft_fast_f32(), the input buffer is be modified by the function.
+* Like with arm_rfft_fast_f32(), the input buffer is modified by the function.
 
 ### Dependencies
 
