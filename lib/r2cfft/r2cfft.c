@@ -65,7 +65,7 @@ void r2cfft(arm_rfft_fast_instance_f32 *pInstance, float32_t *pIn, float32_t *pO
 	}
 
 	arm_cmplx_conj_f32(&pOut[2], &pOut[fftLength + 2], (fftLength / 2) - 1);	// Complex conjugate first half into second half
-	cmplxSwap(&pOut[fftLength + 2], (fftLength - 2));							// Flip frequencies of the second half
-	pOut[fftLength] = pOut[1];													// pOut[1] = Re[n/2]
-	pOut[1] = 0;																// Im[0] always 0 (Re[0] is DC)
+	cmplxSwap(&pOut[fftLength + 2], (fftLength - 2));				// Flip frequencies of the second half
+	pOut[fftLength] = pOut[1];							// pOut[1] = Re[n/2]
+	pOut[1] = 0;									// Im[0] always 0 (Re[0] is DC)
 }
