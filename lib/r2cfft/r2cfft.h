@@ -18,15 +18,15 @@
 
 enum TransformDirection
 {
-    Forward,
-    Inverse
+	Forward,
+	Inverse
 };
 
 #ifdef __cplusplus
 extern "C"
 {
 #endif
-    void r2cfft(arm_rfft_fast_instance_f32 *pInstance, float32_t *pIn, float32_t *pOut, size_t fftSize, uint8_t inverseFlag);
+	void r2cfft(arm_rfft_fast_instance_f32 *pInstance, float32_t *pIn, float32_t *pOut, size_t fftSize, uint8_t inverseFlag);
 #ifdef __cplusplus
 };
 #endif

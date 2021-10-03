@@ -52,9 +52,11 @@ and
 r2cfft(&rfftInstance, pIn, pOut, FFT_SIZE, Inverse);
 ```
 
+See main.cpp for example usage.
+
 #### Note
 
-Like with arm_rfft_fast_f32(), pIn will be modified by the operation. 
+* Like with arm_rfft_fast_f32(), the input buffer will be modified by the operation. 
 
 ### Dependencies
 
@@ -71,4 +73,4 @@ Like with arm_rfft_fast_f32(), pIn will be modified by the operation.
 
 ## License
 
-r2cfft is licensed under the [MIT] License - see LICENSE for details
+r2cfft is licensed under the MIT License - see LICENSE for details
