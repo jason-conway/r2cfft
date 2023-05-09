@@ -6,7 +6,7 @@ A minimal R2C FFT wrapper for the CMSIS DSP Library
 
 r2cfft implements a wrapper for the arm_rfft_fast_f32() function, producing an identically formatted output as the arm_cfft_f32() function. It is intended to provide a high-efficiency near drop-in-replacement for arm_cfft_f32() when used on real-valued sequences.
 
-The arm_rfft_fast_f32() function performs the FFT of a real sequence of length N and returns an output array of length N due to the even symmetry present in the frequency domain. The r2cfft wrapper performs the real N-point FFT using arm_rfft_fast_f32(), placing the N-point result in a buffer of size 2N. The complex conjugate of points [0] through [N-1] is taken and placed between points [N] through [2 * N - 1]. The frequencies in points [N] through [2 * N - 1] are then swapped to yield an a complete 2N-sized output equivalent to the cfft function. 
+The arm_rfft_fast_f32() function performs the FFT of a real sequence of length N and returns an output array of length N due to the even symmetry present in the frequency domain. The r2cfft wrapper performs the real N-point FFT using arm_rfft_fast_f32(), placing the N-point result in a buffer of size 2N. The complex conjugate of points [0] through [N-1] is taken and placed between points [N] through [2 * N - 1]. The frequencies in points [N] through [2 * N - 1] are then swapped to yield a complete 2N-sized output equivalent to the cfft function. 
 
 ## Performance
 
